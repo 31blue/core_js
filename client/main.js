@@ -1,13 +1,5 @@
-
-
-const a = "hello";
-
-
-
+const a = 'hello';
 
 function sum() {
-
   console.log(1 + 2);
-
-
 }

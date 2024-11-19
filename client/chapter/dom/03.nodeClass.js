@@ -76,10 +76,6 @@ console.log((about.textContent = '70% 파격 세일'));
 // * hidden은 HTML 속성으로, DOM 프로퍼티로 사용 가능
 // * hidden 프로퍼티는 기술적으로 style="display:none"와 동일
 
-
-
-
-
 // gsap.to('nav',{
 //   x: 100,
 //   y: 100,
@@ -88,19 +84,3 @@ console.log((about.textContent = '70% 파격 세일'));
 //   repeat: -1,
 //   yoyo: true
 // })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
