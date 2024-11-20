@@ -1,5 +1,7 @@
-const a = 'hello';
-
-function sum() {
-  console.log(1 + 2);
-}
+import {
+  getNode as $,
+  getNodes,
+  typeError,
+  insertLast,
+  clearContents,
+} from './lib/index,js';
