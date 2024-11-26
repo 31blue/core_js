@@ -2,6 +2,10 @@
 
 
 
+// console.log(temp.content.cloneNode(true));
+
+
+
 
 
 class MyElement extends HTMLElement {
@@ -11,13 +15,23 @@ class MyElement extends HTMLElement {
     
     this.attachShadow({mode:'open'});
 
+    
+    
     this.shadowRoot.innerHTML = `
+   
+      <style>
+       @import url('./style.css'); 
+      </style>
 
-      <div>hello</div>
+      
+      <div class="card">
+        <slot name="title">Default Title</slot>
+        <slot name="content">Default Contents</slot>
+        <slot></slot>
+      </div>
+      
+    
     `
-
-    
-    
   }
 
 }
