@@ -15,7 +15,6 @@ export class Button extends HTMLElement {
     this.render();
     
   }
-
   static get observedAttributes(){
     return ['active']
   }
@@ -61,6 +60,7 @@ export class Button extends HTMLElement {
   this.shadowRoot.querySelector('button')
   .addEventListener('click',this.handleClick.bind(this))
   }
+
 }
 
 
