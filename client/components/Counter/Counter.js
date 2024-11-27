@@ -33,6 +33,27 @@ export class Counter extends HTMLElement {
     this.state.value += 1;
     this.dataset.value = this.state.value
   }
+  handleDecrement(){
+    this.state.value -= 1;
+    this.dataset.value = this.state.value
+  }
+
+  delegationEvent(){
+    
+    this.shadowRoot.addEventListener('click',(e)=>{
+      const target = e.target.closest('button');
+
+      if(!target) return; 
+      
+      if(target.classList.contains('increment')){
+        this.handleIncrement()
+      }else{
+        this.handleDecrement()
+      }
+    })
+
+
+  }
 
   render(){
 
@@ -48,8 +69,7 @@ export class Counter extends HTMLElement {
       </div>
     `
 
-    this.shadowRoot.querySelector('.increment')
-    .addEventListener('click',this.handleIncrement.bind(this));
+
   }
   
 }
