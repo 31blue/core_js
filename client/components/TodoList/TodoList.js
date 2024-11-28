@@ -1,4 +1,5 @@
 
+import { TodoItem } from "../TodoItem/TodoItem.js";
 
 
 const todoTemplate = document.createElement('template');
@@ -33,10 +34,9 @@ export class TodoList extends HTMLElement {
   }
 
   handleAddClick(){
-    const tag = document.createElement('custom-todo-item');
-    // tag.textContent = 'list';
 
-    this.todo.append(tag);
+    const todoItem = new TodoItem(Date.now(),'',false);
+    this.todo.append(todoItem);
     
   }
 
@@ -44,6 +44,9 @@ export class TodoList extends HTMLElement {
     this.shadowRoot.append(todoTemplate.content.cloneNode(true))
   }
 }
+
+
+
 
 
 
