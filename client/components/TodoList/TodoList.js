@@ -20,14 +20,31 @@ export class TodoList extends HTMLElement {
     super();
 
     this.attachShadow({mode:'open'})
-    this.render()
+    this.render();
+    
+    this.container = this.shadowRoot.querySelector('.container');
+    this.todo = this.container.querySelector('.todo');
+    this.addButton = this.container.querySelector('.add-item');
+    
   }
 
+  connectedCallback(){
+    this.addButton.addEventListener('click',()=>this.handleAddClick());
+  }
+
+  handleAddClick(){
+    const tag = document.createElement('custom-todo-item');
+    // tag.textContent = 'list';
+
+    this.todo.append(tag);
+    
+  }
 
   render(){
     this.shadowRoot.append(todoTemplate.content.cloneNode(true))
   }
 }
+
 
 
 

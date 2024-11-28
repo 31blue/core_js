@@ -5,6 +5,7 @@ import { Button } from "./components/Button/Button.js";
 import { Card } from "./components/Card/Card.js";
 import { Counter } from "./components/Counter/Counter.js";
 import { TodoList } from "./components/TodoList/TodoList.js";
+import { TodoItem } from "./components/TodoItem/TodoItem.js";
 
 
 
@@ -18,6 +19,7 @@ function defineElements(){
   customElements.define('custom-card',Card)
   customElements.define('custom-counter',Counter)
   customElements.define('custom-todo',TodoList)
+  customElements.define('custom-todo-item',TodoItem)
 }
 
 defineElements()
