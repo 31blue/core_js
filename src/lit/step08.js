@@ -77,12 +77,12 @@ class TodoList extends LitElement {
       </ul>
     `
 
-
+    const todosOrMessage = items.length > 0 ? todos : finishMessage
 
     return html /* html */` 
     <style>${s}</style>
       <h2 class="title">To Do List</h2>
-          
+      ${todosOrMessage}
       <label id="newItem">
         <input class="newItem" type="text" id="newItem" aria-label="새로운 아이템"/>
       </label> 
