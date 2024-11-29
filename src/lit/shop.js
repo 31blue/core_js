@@ -1,4 +1,4 @@
-import { LitElement, html, css } from 'lit'
+import { LitElement, html } from 'lit'
 import s from '/src/lit/shop.css?inline'
 const data = [
 
@@ -61,21 +61,28 @@ class Product extends LitElement{
 
         <form class="register">
           <div>
-            상품명 : <input id="product" type="text" />
+           <label>상품명 : </label> <input id="product" type="text" />
           </div>
           <div>
-            가격 : <input id="price" type="number" />
+          <label>가격 : </label> <input id="price" type="number" />
           </div>
           <div>
-            수량 : <input id="quantity" type="number" />
+          <label>수량 : </label> <input id="quantity" type="number" />
           </div>
           <button @click=${this.handleAdd} type="submit" class="add">추가</button>
         </form>
-      
       </div>
-
     `
+  }
 
+  get product(){
+    return this.renderRoot.querySelector('#product') ?? null;
+  }
+  get price(){
+    return this.renderRoot.querySelector('#price') ?? null;
+  }
+  get quantity(){
+    return this.renderRoot.querySelector('#quantity') ?? null;
   }
 
   handleAdd(e){
@@ -83,7 +90,7 @@ class Product extends LitElement{
     e.preventDefault();
     this._productItems = [
       ...this._productItems,
-      {id:this.productCount += 1, product:'차돌박이 숙주 볶음', price: 10320, quantity:2 }
+      {id:this.productCount += 1, product: this.product.value, price: this.price.value, quantity: this.quantity.value }
     ]
   }
 }
