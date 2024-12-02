@@ -45,7 +45,7 @@ let person:[string,number] = ['tiger',30]
 const user:[string,number][] = [
   ['심선범',30],
   ['신석범',35],
-  ['신선범',13]
+  ['신선범',13],
 ]
 
 

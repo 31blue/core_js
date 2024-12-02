@@ -26,6 +26,7 @@ type mixed = User & User1
 
 
 
+
 interface _User {
   id:number,
   name:string,

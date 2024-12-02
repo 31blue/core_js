@@ -11,7 +11,7 @@ function sumFunc<T>(value:T):T{
 
 const a = sumFunc(10);
 const b = sumFunc('hello');
-const c = sumFunc(false);
+// const c = sumFunc();
 
 
 /* 
@@ -37,9 +37,17 @@ swapAtoB(1,true) // [true,1]
 
 
 
+function getLength<T extends {length:number}>(data:T):number{
+  return data.length
+}
 
 
 
+
+const b1 = getLength([1,2,3]) // 3
+const b2 = getLength('hi') // 2
+// const _b3 = getLength(false) // 2
+const b3 = getLength({name:'tiger',length:3}) // 2
 
 
 
