@@ -34,8 +34,3 @@ let matrix:[number,number,number][] = [
 
 
 
-
-
-
-
-
