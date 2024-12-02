@@ -1,6 +1,12 @@
 // 문제: product 객체에 Product 타입과 동적 속성을 추가하세요
 
-const product = {
+type Product = {
+  name:string,
+  price:number,
+  [key:string]: string | number
+}
+
+const product:Product = {
   name: "Laptop",
   price: 1000
 };
@@ -17,7 +23,17 @@ console.log(product); // { name: 'Laptop', price: 1000, discount: 10, color: 'bl
 
 // 문제: employeeData에 Employee타입을 지정하고 동적으로 들어오는 정보를 추가하세요
 
-const employeeData = {
+
+type User = {
+  name:string,
+  position:string,
+  salary:number,
+  [key:string]: string | number
+}
+
+type Employee = { [key:string]:User }
+
+const employeeData:Employee = {
   John: { 
     name: "John", 
     position: "Developer", 
