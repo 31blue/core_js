@@ -92,7 +92,9 @@ async function renderPokemon(){
       </li>
     `).join('')
 
-    document.body.insertAdjacentHTML('beforeend',tag);
+    const ul = document.querySelector('ul') as HTMLUListElement
+    ul.insertAdjacentHTML('beforeend',tag);
+    
   }
 }
 
