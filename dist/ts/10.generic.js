@@ -4,7 +4,7 @@ function sumFunc(value) {
 }
 const a = sumFunc(10);
 const b = sumFunc('hello');
-const c = sumFunc(false);
+// const c = sumFunc();
 /*
 
   T : Type
@@ -25,6 +25,6 @@ function getLength(data) {
 }
 const b1 = getLength([1, 2, 3]); // 3
 const b2 = getLength('hi'); // 2
-// const b3 = getLength(false) // 2
+// const _b3 = getLength(false) // 2
 const b3 = getLength({ name: 'tiger', length: 3 }); // 2
 export {};
