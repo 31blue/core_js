@@ -86,7 +86,7 @@ async function renderPokemon(){
 
   if(Array.isArray(p)){
     const tag = p.map((item)=>`
-      <li>
+      <li class="card">
         <img src="${item.image}" alt="" />
         <h2>${item.name}</h2>
       </li>
