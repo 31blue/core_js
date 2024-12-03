@@ -53,13 +53,15 @@ async function fetchData(url:string):Promise<_User>{
   const data = await response.json();
 
   // 데이터 리턴 
-  console.log( data );
   
   return data
 }
 
 
 const data = await fetchData(END_POINT);
+
+
+console.log( data );
 
 
 function render(target:Element | HTMLBodyElement = document.body, data:_User):void{
@@ -78,7 +80,7 @@ function render(target:Element | HTMLBodyElement = document.body, data:_User):vo
 
 
 
-render(document.body,data)
+// render(document.body,data)
 
 
 

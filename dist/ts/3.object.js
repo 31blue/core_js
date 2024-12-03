@@ -7,5 +7,5 @@ user.id = 10;
 const config = {
     apiKey: 'ASzxjciqwe14nmzk@'
 };
-config.apiKey = 'aaaaaa';
 export {};
+// config.apiKey = 'aaaaaa'

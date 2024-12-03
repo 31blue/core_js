@@ -22,12 +22,18 @@ async function fetchData(url) {
     const response = await fetch(url);
     const data = await response.json();
     // 데이터 리턴 
-    console.log(data);
     return data;
 }
-const data = fetchData(END_POINT);
-function render() {
+const data = await fetchData(END_POINT);
+console.log(data);
+function render(target = document.body, data) {
     // 데이터 받아오기 
+    if (Array.isArray(data)) {
+        data.forEach((item) => {
+            target.insertAdjacentHTML('beforeend', `<li>${item.name}</li>`);
+        });
+    }
     // 랜더링 
 }
 export {};
+// render(document.body,data)
