@@ -7,6 +7,7 @@ export default css `
   article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
   nav ul{list-style:none}
   ul{list-style:none}
+  img{width:100%}
   blockquote,q{quotes:none}
   blockquote:before,blockquote:after,q:before,q:after{content:none}
   a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}

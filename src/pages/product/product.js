@@ -3,9 +3,10 @@
 import { getPbImageURL } from "@/api/getPbImageURL";
 
 
+
 async function renderProduct(){
 
-  const response = await fetch('http://127.0.0.1:8090/api/collections/products/records');
+  const response = await fetch(`${import.meta.env.VITE_PB_API}/collections/products/records`);
   const data = await response.json();
   const tag = `
     <div class="container">
