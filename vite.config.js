@@ -3,7 +3,7 @@ import { defineConfig } from "vite";
 
 
 
-export default defineConfig({
+ const config = defineConfig({
   resolve:{
     alias:[
       {find:"@", replacement:"/src"}
@@ -11,7 +11,7 @@ export default defineConfig({
   }
 })
 
-
+export default config
 
 
 
