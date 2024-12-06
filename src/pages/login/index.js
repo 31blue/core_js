@@ -1,12 +1,5 @@
 
-import '@/pages/product/product.css'
+
 import '@/Layout/Header.ts'
-// import '@/pages/product/product'
-import '@/components/ProductList'
-
-
-
-
-
-
-
+// import '@/pages/login/login'
+import '@/components/Login'
